@@ -1142,6 +1142,192 @@ class ModuleConfig(google.protobuf.message.Message):
         ) -> None: ...
         def ClearField(self, field_name: typing.Literal["blue", b"blue", "current", b"current", "green", b"green", "led_state", b"led_state", "red", b"red"]) -> None: ...
 
+    @typing.final
+    class MeshbusSerialConfig(google.protobuf.message.Message):
+        """
+        Meshbus Serial Config
+        """
+
+        DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+        class _Serial_Baud:
+            ValueType = typing.NewType("ValueType", builtins.int)
+            V: typing_extensions.TypeAlias = ValueType
+
+        class _Serial_BaudEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType], builtins.type):
+            DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor
+            BAUD_DEFAULT: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 0
+            BAUD_110: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 1
+            BAUD_300: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 2
+            BAUD_600: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 3
+            BAUD_1200: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 4
+            BAUD_2400: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 5
+            BAUD_4800: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 6
+            BAUD_9600: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 7
+            BAUD_19200: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 8
+            BAUD_38400: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 9
+            BAUD_57600: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 10
+            BAUD_115200: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 11
+            BAUD_230400: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 12
+            BAUD_460800: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 13
+            BAUD_576000: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 14
+            BAUD_921600: ModuleConfig.MeshbusSerialConfig._Serial_Baud.ValueType  # 15
+
+        class Serial_Baud(_Serial_Baud, metaclass=_Serial_BaudEnumTypeWrapper):
+            """
+            Serial Baud rates
+            """
+
+        BAUD_DEFAULT: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 0
+        BAUD_110: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 1
+        BAUD_300: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 2
+        BAUD_600: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 3
+        BAUD_1200: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 4
+        BAUD_2400: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 5
+        BAUD_4800: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 6
+        BAUD_9600: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 7
+        BAUD_19200: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 8
+        BAUD_38400: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 9
+        BAUD_57600: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 10
+        BAUD_115200: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 11
+        BAUD_230400: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 12
+        BAUD_460800: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 13
+        BAUD_576000: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 14
+        BAUD_921600: ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType  # 15
+
+        class _Serial_Format:
+            ValueType = typing.NewType("ValueType", builtins.int)
+            V: typing_extensions.TypeAlias = ValueType
+
+        class _Serial_FormatEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType], builtins.type):
+            DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor
+            FORMAT_DEFAULT: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 0
+            FORMAT_5N1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 1
+            FORMAT_6N1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 2
+            FORMAT_7N1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 3
+            FORMAT_8N1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 4
+            FORMAT_5N2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 5
+            FORMAT_6N2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 6
+            FORMAT_7N2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 7
+            FORMAT_8N2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 8
+            FORMAT_5E1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 9
+            FORMAT_6E1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 10
+            FORMAT_7E1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 11
+            FORMAT_8E1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 12
+            FORMAT_5E2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 13
+            FORMAT_6E2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 14
+            FORMAT_7E2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 15
+            FORMAT_8E2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 16
+            FORMAT_5O1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 17
+            FORMAT_6O1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 18
+            FORMAT_7O1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 19
+            FORMAT_8O1: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 20
+            FORMAT_5O2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 21
+            FORMAT_6O2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 22
+            FORMAT_7O2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 23
+            FORMAT_8O2: ModuleConfig.MeshbusSerialConfig._Serial_Format.ValueType  # 24
+
+        class Serial_Format(_Serial_Format, metaclass=_Serial_FormatEnumTypeWrapper):
+            """
+            Serial format
+            """
+
+        FORMAT_DEFAULT: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 0
+        FORMAT_5N1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 1
+        FORMAT_6N1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 2
+        FORMAT_7N1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 3
+        FORMAT_8N1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 4
+        FORMAT_5N2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 5
+        FORMAT_6N2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 6
+        FORMAT_7N2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 7
+        FORMAT_8N2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 8
+        FORMAT_5E1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 9
+        FORMAT_6E1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 10
+        FORMAT_7E1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 11
+        FORMAT_8E1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 12
+        FORMAT_5E2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 13
+        FORMAT_6E2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 14
+        FORMAT_7E2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 15
+        FORMAT_8E2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 16
+        FORMAT_5O1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 17
+        FORMAT_6O1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 18
+        FORMAT_7O1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 19
+        FORMAT_8O1: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 20
+        FORMAT_5O2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 21
+        FORMAT_6O2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 22
+        FORMAT_7O2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 23
+        FORMAT_8O2: ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType  # 24
+
+        class _Serial_Mode:
+            ValueType = typing.NewType("ValueType", builtins.int)
+            V: typing_extensions.TypeAlias = ValueType
+
+        class _Serial_ModeEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[ModuleConfig.MeshbusSerialConfig._Serial_Mode.ValueType], builtins.type):
+            DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor
+            DEFAULT: ModuleConfig.MeshbusSerialConfig._Serial_Mode.ValueType  # 0
+            TRANSPARENT: ModuleConfig.MeshbusSerialConfig._Serial_Mode.ValueType  # 1
+            MODBUS_RTU: ModuleConfig.MeshbusSerialConfig._Serial_Mode.ValueType  # 2
+
+        class Serial_Mode(_Serial_Mode, metaclass=_Serial_ModeEnumTypeWrapper):
+            """
+            Serial Modes
+            """
+
+        DEFAULT: ModuleConfig.MeshbusSerialConfig.Serial_Mode.ValueType  # 0
+        TRANSPARENT: ModuleConfig.MeshbusSerialConfig.Serial_Mode.ValueType  # 1
+        MODBUS_RTU: ModuleConfig.MeshbusSerialConfig.Serial_Mode.ValueType  # 2
+
+        ENABLED_FIELD_NUMBER: builtins.int
+        BAUD_FIELD_NUMBER: builtins.int
+        FORMAT_FIELD_NUMBER: builtins.int
+        TIMEOUT_FIELD_NUMBER: builtins.int
+        MODE_FIELD_NUMBER: builtins.int
+        SKIP_ACK_FIELD_NUMBER: builtins.int
+        MODBUS_RTU_RESPONSE_TIMEOUT_FIELD_NUMBER: builtins.int
+        enabled: builtins.bool
+        """
+        Preferences for the SerialModule
+        """
+        baud: global___ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType
+        """
+        Serial baud rate
+        """
+        format: global___ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType
+        """
+        Format for serial module operation
+        """
+        timeout: builtins.int
+        """
+        Serial timeout in milliseconds
+        """
+        mode: global___ModuleConfig.MeshbusSerialConfig.Serial_Mode.ValueType
+        """
+        Mode for serial module operation
+        """
+        skip_ack: builtins.bool
+        """
+        Skip Acknowledgement for serial messages
+        """
+        modbus_rtu_response_timeout: builtins.int
+        """
+        Modbus RTU response timeout in milliseconds
+        This is used when the Serial module is in Modbus RTU mode
+        and defines how long the node will wait for a response after sending a request
+        if not set, it will default broadcast frame to all nodes
+        """
+        def __init__(
+            self,
+            *,
+            enabled: builtins.bool = ...,
+            baud: global___ModuleConfig.MeshbusSerialConfig.Serial_Baud.ValueType = ...,
+            format: global___ModuleConfig.MeshbusSerialConfig.Serial_Format.ValueType = ...,
+            timeout: builtins.int = ...,
+            mode: global___ModuleConfig.MeshbusSerialConfig.Serial_Mode.ValueType = ...,
+            skip_ack: builtins.bool = ...,
+            modbus_rtu_response_timeout: builtins.int = ...,
+        ) -> None: ...
+        def ClearField(self, field_name: typing.Literal["baud", b"baud", "enabled", b"enabled", "format", b"format", "modbus_rtu_response_timeout", b"modbus_rtu_response_timeout", "mode", b"mode", "skip_ack", b"skip_ack", "timeout", b"timeout"]) -> None: ...
+
     MQTT_FIELD_NUMBER: builtins.int
     SERIAL_FIELD_NUMBER: builtins.int
     EXTERNAL_NOTIFICATION_FIELD_NUMBER: builtins.int
@@ -1155,6 +1341,7 @@ class ModuleConfig(google.protobuf.message.Message):
     AMBIENT_LIGHTING_FIELD_NUMBER: builtins.int
     DETECTION_SENSOR_FIELD_NUMBER: builtins.int
     PAXCOUNTER_FIELD_NUMBER: builtins.int
+    MESHBUS_SERIAL_FIELD_NUMBER: builtins.int
     @property
     def mqtt(self) -> global___ModuleConfig.MQTTConfig:
         """
@@ -1233,6 +1420,17 @@ class ModuleConfig(google.protobuf.message.Message):
         TODO: REPLACE
         """
 
+    @property
+    def meshbus_serial(self) -> global___ModuleConfig.MeshbusSerialConfig:
+        """--------------------------------------------------------
+        The following modules are specific for Meshbus Firmware
+        and are not used in the official Meshtastic firmware.
+        --------------------------------------------------------
+
+
+        Serial Config
+        """
+
     def __init__(
         self,
         *,
@@ -1249,10 +1447,11 @@ class ModuleConfig(google.protobuf.message.Message):
         ambient_lighting: global___ModuleConfig.AmbientLightingConfig | None = ...,
         detection_sensor: global___ModuleConfig.DetectionSensorConfig | None = ...,
         paxcounter: global___ModuleConfig.PaxcounterConfig | None = ...,
+        meshbus_serial: global___ModuleConfig.MeshbusSerialConfig | None = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing.Literal["ambient_lighting", b"ambient_lighting", "audio", b"audio", "canned_message", b"canned_message", "detection_sensor", b"detection_sensor", "external_notification", b"external_notification", "mqtt", b"mqtt", "neighbor_info", b"neighbor_info", "paxcounter", b"paxcounter", "payload_variant", b"payload_variant", "range_test", b"range_test", "remote_hardware", b"remote_hardware", "serial", b"serial", "store_forward", b"store_forward", "telemetry", b"telemetry"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing.Literal["ambient_lighting", b"ambient_lighting", "audio", b"audio", "canned_message", b"canned_message", "detection_sensor", b"detection_sensor", "external_notification", b"external_notification", "mqtt", b"mqtt", "neighbor_info", b"neighbor_info", "paxcounter", b"paxcounter", "payload_variant", b"payload_variant", "range_test", b"range_test", "remote_hardware", b"remote_hardware", "serial", b"serial", "store_forward", b"store_forward", "telemetry", b"telemetry"]) -> None: ...
-    def WhichOneof(self, oneof_group: typing.Literal["payload_variant", b"payload_variant"]) -> typing.Literal["mqtt", "serial", "external_notification", "store_forward", "range_test", "telemetry", "canned_message", "audio", "remote_hardware", "neighbor_info", "ambient_lighting", "detection_sensor", "paxcounter"] | None: ...
+    def HasField(self, field_name: typing.Literal["ambient_lighting", b"ambient_lighting", "audio", b"audio", "canned_message", b"canned_message", "detection_sensor", b"detection_sensor", "external_notification", b"external_notification", "meshbus_serial", b"meshbus_serial", "mqtt", b"mqtt", "neighbor_info", b"neighbor_info", "paxcounter", b"paxcounter", "payload_variant", b"payload_variant", "range_test", b"range_test", "remote_hardware", b"remote_hardware", "serial", b"serial", "store_forward", b"store_forward", "telemetry", b"telemetry"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing.Literal["ambient_lighting", b"ambient_lighting", "audio", b"audio", "canned_message", b"canned_message", "detection_sensor", b"detection_sensor", "external_notification", b"external_notification", "meshbus_serial", b"meshbus_serial", "mqtt", b"mqtt", "neighbor_info", b"neighbor_info", "paxcounter", b"paxcounter", "payload_variant", b"payload_variant", "range_test", b"range_test", "remote_hardware", b"remote_hardware", "serial", b"serial", "store_forward", b"store_forward", "telemetry", b"telemetry"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing.Literal["payload_variant", b"payload_variant"]) -> typing.Literal["mqtt", "serial", "external_notification", "store_forward", "range_test", "telemetry", "canned_message", "audio", "remote_hardware", "neighbor_info", "ambient_lighting", "detection_sensor", "paxcounter", "meshbus_serial"] | None: ...
 
 global___ModuleConfig = ModuleConfig
 
